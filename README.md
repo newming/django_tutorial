@@ -69,3 +69,11 @@ python manage.py shell
 python manage.py createsuperuser
 # newming woai. 977@qq.com
 ```
+
+## 测试
+
+编写测试文件 `polls/tests.py`
+
+```bash
+python manage.py test polls
+```
