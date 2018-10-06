@@ -1,8 +1,13 @@
 <h1>{{ question.question_text }}</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 <!-- question.choice_set.all 会被解析为 question.choice_set.all() -->
 <!-- https://docs.djangoproject.com/zh-hans/2.0/intro/tutorial03/#use-the-template-system -->
-<ul>
+<!-- forloop.counter 指示 for 标签已经循环多少次。 -->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
 {% endfor %}
-</ul>
+    <input type="submit" value="Vote" />
+</form>
