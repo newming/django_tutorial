@@ -2,6 +2,14 @@
 
 [官方教程](https://docs.djangoproject.com/zh-hans/2.0/intro/)
 
+- 第1节: 请求和响应
+- 第2节: 模型和 admin 站点
+- 第3节: 视图和模板
+- 第4节: 表单和通用视图
+- 第5节: 测试
+- 第6节: 静态文件
+- 第7节: 自定义 admin 站点
+
 ## 安装 virtualenvwrapper
 
 ```bash
