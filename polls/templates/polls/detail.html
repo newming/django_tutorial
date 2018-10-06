@@ -1,0 +1,8 @@
+<h1>{{ question.question_text }}</h1>
+<!-- question.choice_set.all 会被解析为 question.choice_set.all() -->
+<!-- https://docs.djangoproject.com/zh-hans/2.0/intro/tutorial03/#use-the-template-system -->
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
+{% endfor %}
+</ul>
